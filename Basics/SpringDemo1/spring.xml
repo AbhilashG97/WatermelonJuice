@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="springBean" class="Student">
+		<property name="name" value="Abhilash G"></property>
+		<property name="rollNumber" value="16002"></property>
+	</bean>
+</beans>
