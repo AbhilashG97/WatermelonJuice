@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="iceCreamBean" class="IceCream">
+		<property name="flavours">
+			<list>
+				<bean class="Flavour">
+					<property name="flavour" value="Chocolate"/>
+				</bean>
+				
+				<ref bean="iceCreamFlavourBean"/>
+				
+				<bean class="Flavour">
+					<property name="flavour" value="Vanilla"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="iceCreamFlavourBean" class="Flavour">
+		<property name="flavour" value="Afghani nuts"></property>		
+	</bean>
+	
+</beans>
