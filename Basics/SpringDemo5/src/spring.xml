@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="carBean" class="Car">
+		
+		<property name="engine">
+			<bean class="Engine">
+				<property name="engineType" value="V12 SuperCharged Engine"></property>
+				<property name="powerOutput" value="680"></property>
+			</bean>
+		</property>
+		
+		<property name="tyre" ref="tyreBean"/>
+	</bean>
+	
+	<bean id="tyreBean" class="Tyre">
+		<property name="tyreType" value="Radial"></property>
+		<property name="tyreSize" value="175"></property>
+	</bean>
+	
+	<alias name="carBean" alias="beanCar"></alias>
+</beans>
