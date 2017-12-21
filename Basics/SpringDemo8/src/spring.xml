@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="cakeBean" class="Cake" autowire="constructor">
+			
+	</bean>
+	
+	<bean id="flavour" class="Flavour">
+		<constructor-arg value="chocolate"></constructor-arg>
+	</bean>
+	
+	<bean id="icingFlavourBean" class="Flavour">
+		<constructor-arg value="raspberry"></constructor-arg>
+	</bean>
+	
+	<bean id="icing" class="Icing">
+		<constructor-arg index="0" ref="icingFlavourBean"/>
+		<constructor-arg index="1" value="red"/>
+	</bean>
+</beans>

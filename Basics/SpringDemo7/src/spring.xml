@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="carBean" class="Car" autowire="byType">
+		
+	</bean>
+	
+	<bean id="engine" class="Engine">
+		<property name="engineType" value="W16 SuperCharged Engine"></property>
+		<property name="powerOutput" value="1000"></property>		
+	</bean>
+	
+	<bean id="tyre" class="Tyre">
+		<property name="tyreType" value="Radial"></property>
+		<property name="tyreSize" value="175"></property>
+	</bean>
+	
+	<bean id="exhaust" class="Exhaust">
+		<property name="exhaustType" value="Dual Twin"></property>
+		<property name="price" value="14550"></property>
+	</bean>
+	
+</beans>
